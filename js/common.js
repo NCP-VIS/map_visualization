@@ -71,7 +71,7 @@ function drawCity(smap, china_json, city_json) {
         .enter()
         .append("circle")
         .attr("cx", (d) => smap.projection(d.properties.centroid)[0])
-        .attr("cy", (d) => smap.projection(d.properties.centroid)[1])  // Zhenhua: 这里必须也用投影
+        .attr("cy", (d) => smap.projection(d.properties.centroid)[1])  // 这里必须也用投影
         .attr("r", 0)
         .attr("fill-opacity", 0.5)
         .attr('class', 'circle')
@@ -100,7 +100,7 @@ function drawButtonLegend(smap) {
     let lenged = smap.legend.append('g');
     const w = smap.w, h = smap.h, mapID = smap.mapID, mt_cy = smap.mt_cy;
     lenged.append('text')
-        .text(smap.legendText)//'内陆疫情与人口迁出图')
+        .text(smap.legendText)
         .attr('class', 'main-title')
         .attr('x', w / 2)
         .attr('y', h / 15)
@@ -161,7 +161,6 @@ function drawButtonLegend(smap) {
             }
         })
         .on("click", function (d) {
-            //console.log("button click", smap.today);
             pause_btn_func();
             turnDay(smap, d);
         });
@@ -313,9 +312,6 @@ function ProcessConfirmedData(confirmed_json, popu_pro_json, popu_city_json) {
             t.push(d);
         }
     }
-
-    //console.log(confirmed_ratio);
-    //console.log(tt);
 }
 
 function ProcessMigrationData(json) {
@@ -577,9 +573,6 @@ function drawLine(smap, day) {
             .attr("fill", "#fa0")
             .attr("fill-opacity", 0.1);
     }
-
-    // Zhenhua: TODO: 鼠标移动到车次线上，能显示出车次相关信息。
-    // TODO: 添加箭头. 或是添加从出发点到终止点的动画
 }
 
 function updateBubble(smap, day) {
@@ -614,9 +607,6 @@ function updateBubble(smap, day) {
 }
 
 function updateHeatmapConfirmDivMigration(smap, day, mdata){
-    //console.log("updateHeatmapConfirmDivMigration");
-    //console.log(migration_data);
-    //const mapID = smap.mapID;
     let average_migration = 0.0, cnt = 0;
     for(let mday in days){
         let full_date = updateDate(smap, days[mday]);
@@ -810,7 +800,6 @@ function turnDay(smap, targetday) {
         return null;
     }
 
-    // 或者换一种写法, 直接找id
     d3
         .select("#" + smap.mapID + "singlemap")
         .selectAll(".selectMTimeLine")
@@ -830,7 +819,7 @@ function updateLegend(smap, data) {
     // the onExtremaChange callback gives us min, max, and the gradientConfig
     // so we can update the legend
     smap.mmin.innerHTML = data.min;
-    smap.mmax.innerHTML = ">" + smap.THRESHOLD + "人";
+    smap.mmax.innerHTML = ">" + smap.THRESHOLD;
     // regenerate gradient image
     //console.log(data.gradient);
     if (data.gradient !== smap.gradientCfg) {
