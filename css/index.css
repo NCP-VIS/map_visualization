@@ -1,0 +1,35 @@
+body {
+    background: #bbbbbb;
+}
+title {
+    font-size: 2em;
+    fill: #fff;
+}
+.legend-area {
+    position: absolute;
+    padding: 10px;
+    background: #bbbbbb;
+    outline: 0px solid black;
+    line-height: 1em;
+}
+.legend-area span{
+    font-size: 12px;
+}
+
+.unselectMTimeLine{
+    stroke: #000000;
+    stroke-width: 1;
+    fill: #ffffff;
+}
+
+.selectMTimeLine{
+    stroke: #DA9492;
+    stroke-width: 3;
+    fill: #C23531;
+}
+
+.unselectHoverMTimeLine{
+    stroke: #000000;
+    stroke-width: 1;
+    fill: #C23531;
+}
