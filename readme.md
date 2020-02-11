@@ -14,6 +14,10 @@
 
 中国内地各省累计确诊数量图，颜色越深，代表感染人数越多。
 
+![中国内地累计确诊数量](./screen/migrationbubble.png)
+
+每日武汉流出人口数量气泡图，某地圆圈越大，说明从武汉流到该地的人口越多。
+
 ![累计确诊比例、新增确诊比例](./screen/totalandnew1.png)
 
 各地区累计确诊比例与每日新增比例热度图
@@ -41,27 +45,29 @@
 
 data：具体数据。其中
 
-​	420100_to_citys_20200101_20200203_percent.json：从武汉出发，到各个城市的人口百分比。
+​        data/420100_to_citys_20200101_20200203_percent.json：从武汉出发，到各个城市的人口百分比。
 
-​	420100_to_provinces_20200101_20200203.json：从武汉出发，到各个城市的人口数量。
+​        data/420100_to_provinces_20200101_20200203.json：从武汉出发，到各个城市的人口数量。
 
-​	上面的人口迁移数据截至到2020年2月3日。
+​        上面的人口迁移数据截至到2020年2月3日。
 
-​	china.json：中国地图数据，精确到省级
+​        data/china.json：中国地图数据，精确到省级
 
-​	city.json：中国地图数据，精确到市级
+​        data/city.json：中国地图数据，精确到市级
 
-​	data-c.json：每个省市的确诊人数，截止到2020年2月9日。
+​        data/data-c.json：每个省市的确诊人数，截止到2020年2月9日。
 
-​	population_city.json：各个城市的人口数量。
+​        data/population_city.json：各个城市的人口数量。
 
-​	population_province1.json：各个省（直辖市、自治区）的人口数量。
+​        data/population_province1.json：各个省（直辖市、自治区）的人口数量。
 
-​	traffic.parsed.json：从武汉出发的车次信息。
+​        data/traffic.parsed.json：从武汉出发的车次信息。
 
 js：需要的JavaScript文件。在相关html文件里引用。
 
 confirmcolor.html：中国内地累计确诊人数图。
+
+migrationbubble.html：每日武汉流出人口数量气泡图。
 
 totalandnew1.html：各地区累计确诊比例与每日新增比例热度图。
 
