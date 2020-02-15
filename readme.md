@@ -65,6 +65,10 @@ data：具体数据。其中
 
 js：需要的JavaScript文件。在相关html文件里引用。
 
+other：未在公众号中出现的图片、数据
+
+​        shenzhen：深圳市接触、发病、不适的统计图。
+
 confirmcolor.html：中国内地累计确诊人数图。
 
 migrationbubble.html：每日武汉流出人口数量气泡图。
